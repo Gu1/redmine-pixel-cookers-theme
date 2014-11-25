@@ -16,6 +16,7 @@
 body {
   .lucida;
   background: #FEFEFE;
+  background: url(../images/bg.png);
   color: #555555;
 }
 #wrapper {
@@ -234,12 +235,13 @@ a {
 }
 
 #footer {
+  background: @topMenuBackground;
   border-top: 1px solid #CCCCCC;
   clear: left;
-  color: #666666;
+  color: @topMenuLinkColor;
   font-size: 9px;
-  margin: 40px 30px 0 @headerWidthHidden+40px;
-  padding: 15px 0;
+  margin: 40px 0 0 @headerWidthHidden+9px;
+  padding: 15px 10px;
   text-align: left;
 
   a {
@@ -261,22 +263,22 @@ a {
 // Headers
 #content {
   h2, .wiki h1 {
-    #gradient > .vertical(#ececec, #dedede);
+    #gradient > .vertical(#b4a17a, #a38b5a);
     .box-shadow(0 0 10px rgba(0,0,0,0.1));
     .trebuchet;
     border-bottom: 1px solid #CCCCCC;
-    color: #000;
+    color: #4e2a07;
     font-size: 17px;
     padding: 10px 15px;
     margin-bottom: 10px;
     margin-left: -10px;
     margin-right: -10px;
-    text-shadow: 0 1px 0 #fff;
+    text-shadow: 0 1px 0 #b4a17a;
 
     &:first-of-type {
       .border-radius(6px 6px 0 0);
       height: 23px;
-      margin-top: -5px;
+      margin-top: -6px;
     }
   }
 }
@@ -810,4 +812,4 @@ tr.message.sticky td.subject {
 @import url(plugins/redmine_favourite_projects.less);
 @import url(plugins/redmine_stealth.less);
 
-//@import url(rebrand/pixel-cookers.less);
+@import url(rebrand/pixel-cookers.less);
